@@ -13,7 +13,7 @@ namespace QuanLyNhanSu
 {
     public partial class frmThemNV : Form
     {
-        
+        //public static string source = "SERVER=CRIMSONDRAGON\\SQLEXPRESS; Database=QLNS; Integrated Security=true;";
         public frmThemNV()
         {
             InitializeComponent();
@@ -43,7 +43,19 @@ namespace QuanLyNhanSu
             //if (con.State == ConnectionState.Open)
             //{
             //    MessageBox.Show("Kết nối thành công!");
-            //    string queryStr = "";
+            //    string queryStr = "INSERT INTO NhanVien(MaNV, HoTen, DanToc, GioiTinh, SDT, QueQuan, NgaySinh, MaTDHV, MaPB, BacLuong, MaChucVu, TenTK)"
+            //                        + "VALUES(" + id
+            //                        + ",'" + name
+            //                        + "','" + dantoc
+            //                        + "','" + gioiTinh
+            //                        + "'," + sdt
+            //                        + ",'" + queQuan
+            //                        + "','" + ngaySinh
+            //                        + "'," + maTDHV
+            //                        + "," + maPB
+            //                        + "," + bacLuong
+            //                        + "," + maChucVu
+            //                        + ",'" + tenTK + "')";
             //}
             //else MessageBox.Show("Không thể kết nối tới Database");
         }
