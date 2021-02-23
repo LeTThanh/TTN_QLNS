@@ -33,13 +33,13 @@ namespace QuanLyNhanSu
             this.textBox_timkiem = new System.Windows.Forms.TextBox();
             this.dataGridView_timkiem = new System.Windows.Forms.DataGridView();
             this.button_timkiem = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton_Tennv = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton_tenpb = new System.Windows.Forms.RadioButton();
             this.radioButton_chucvu = new System.Windows.Forms.RadioButton();
             this.radioButton_mapb = new System.Windows.Forms.RadioButton();
             this.radioButton_manv = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_timkiem)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,16 +72,7 @@ namespace QuanLyNhanSu
             this.button_timkiem.TabIndex = 2;
             this.button_timkiem.Text = "Tìm kiếm";
             this.button_timkiem.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(763, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Tìm kiếm theo";
+            this.button_timkiem.Click += new System.EventHandler(this.button_timkiem_Click);
             // 
             // panel1
             // 
@@ -90,7 +81,7 @@ namespace QuanLyNhanSu
             this.panel1.Controls.Add(this.radioButton_manv);
             this.panel1.Controls.Add(this.radioButton_mapb);
             this.panel1.Controls.Add(this.radioButton_chucvu);
-            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.radioButton_tenpb);
             this.panel1.Controls.Add(this.radioButton_Tennv);
             this.panel1.Location = new System.Drawing.Point(575, 80);
             this.panel1.Name = "panel1";
@@ -100,7 +91,7 @@ namespace QuanLyNhanSu
             // radioButton_Tennv
             // 
             this.radioButton_Tennv.AutoSize = true;
-            this.radioButton_Tennv.Location = new System.Drawing.Point(39, 19);
+            this.radioButton_Tennv.Location = new System.Drawing.Point(39, 28);
             this.radioButton_Tennv.Name = "radioButton_Tennv";
             this.radioButton_Tennv.Size = new System.Drawing.Size(122, 21);
             this.radioButton_Tennv.TabIndex = 0;
@@ -108,16 +99,16 @@ namespace QuanLyNhanSu
             this.radioButton_Tennv.Text = "Tên Nhân viên";
             this.radioButton_Tennv.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButton_tenpb
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(215, 77);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(126, 21);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Tên phòng ban";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton_tenpb.AutoSize = true;
+            this.radioButton_tenpb.Location = new System.Drawing.Point(215, 77);
+            this.radioButton_tenpb.Name = "radioButton_tenpb";
+            this.radioButton_tenpb.Size = new System.Drawing.Size(126, 21);
+            this.radioButton_tenpb.TabIndex = 1;
+            this.radioButton_tenpb.TabStop = true;
+            this.radioButton_tenpb.Text = "Tên phòng ban";
+            this.radioButton_tenpb.UseVisualStyleBackColor = true;
             // 
             // radioButton_chucvu
             // 
@@ -152,14 +143,24 @@ namespace QuanLyNhanSu
             this.radioButton_manv.Text = "Mã Nhân viên";
             this.radioButton_manv.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(644, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Tìm kiếm theo";
+            // 
             // Formtimkiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1007, 584);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_timkiem);
             this.Controls.Add(this.dataGridView_timkiem);
             this.Controls.Add(this.textBox_timkiem);
@@ -178,12 +179,12 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.TextBox textBox_timkiem;
         private System.Windows.Forms.DataGridView dataGridView_timkiem;
         private System.Windows.Forms.Button button_timkiem;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radioButton_manv;
         private System.Windows.Forms.RadioButton radioButton_mapb;
         private System.Windows.Forms.RadioButton radioButton_chucvu;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton_tenpb;
         private System.Windows.Forms.RadioButton radioButton_Tennv;
+        private System.Windows.Forms.Label label1;
     }
 }
