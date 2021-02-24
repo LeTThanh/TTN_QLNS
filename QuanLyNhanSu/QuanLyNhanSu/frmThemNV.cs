@@ -13,7 +13,7 @@ namespace QuanLyNhanSu
 {
     public partial class frmThemNV : Form
     {
-        //public static string source = "SERVER=CRIMSONDRAGON\\SQLEXPRESS; Database=QLNS; Integrated Security=true;";
+        SqlConnection con = new SqlConnection(ConnectionClass.cs);
         public frmThemNV()
         {
             InitializeComponent();
@@ -32,32 +32,45 @@ namespace QuanLyNhanSu
             string gioiTinh = textbox_GioiTinh.Text;
             string sdt = textbox_SDT.Text;
             string queQuan = textbox_QueQuan.Text;
-            DateTime ngaySinh = Convert.ToDateTime(textbox_NgaySinh);
+            DateTime ngaySinh = Convert.ToDateTime(textbox_NgaySinh.Text);
             string maTDHV = textbox_MaTDHV.Text;
             string maPB = textbox_MaPhongBan.Text;
             int bacLuong = Int32.Parse(textbox_BacLuong.Text);
             string maChucVu = textbox_MaChucVu.Text;
             string tenTK = textbox_TenTK.Text;
-            //SqlConnection con = new SqlConnection(source);
-            //con.Open();
-            //if (con.State == ConnectionState.Open)
-            //{
-            //    MessageBox.Show("Kết nối thành công!");
-            //    string queryStr = "INSERT INTO NhanVien(MaNV, HoTen, DanToc, GioiTinh, SDT, QueQuan, NgaySinh, MaTDHV, MaPB, BacLuong, MaChucVu, TenTK)"
-            //                        + "VALUES(" + id
-            //                        + ",'" + name
-            //                        + "','" + dantoc
-            //                        + "','" + gioiTinh
-            //                        + "'," + sdt
-            //                        + ",'" + queQuan
-            //                        + "','" + ngaySinh
-            //                        + "'," + maTDHV
-            //                        + "," + maPB
-            //                        + "," + bacLuong
-            //                        + "," + maChucVu
-            //                        + ",'" + tenTK + "')";
-            //}
-            //else MessageBox.Show("Không thể kết nối tới Database");
+            try
+            {
+                string queryStr = "INSERT INTO NhanVien(MaNV, HoTen, DanToc, GioiTinh, SDT, QueQuan, NgaySinh, MaTDHV, MaPB, BacLuong, MaChucVu, TenTK)"
+                                + "VALUES(" + id
+                                + ",'" + name
+                                + "','" + dantoc
+                                + "','" + gioiTinh
+                                + "'," + sdt
+                                + ",'" + queQuan
+                                + "','" + ngaySinh
+                                + "'," + maTDHV
+                                + "," + maPB
+                                + "," + bacLuong
+                                + "," + maChucVu
+                                + ",'" + tenTK + "')";
+                SqlCommand cmd = new SqlCommand(queryStr, con);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        private void frmThemNV_Load(object sender, EventArgs e)
+        {
+            con.Open();
+            if (con.State == ConnectionState.Open) MessageBox.Show("Kết nối thành công!");
+            else MessageBox.Show("Không thể kết nối tới Database");
         }
     }
 }

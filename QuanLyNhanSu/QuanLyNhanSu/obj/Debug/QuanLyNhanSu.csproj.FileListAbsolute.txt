@@ -14,7 +14,6 @@ D:\TTNhom\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
 D:\TTNhom\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
 D:\TTNhom\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
 D:\TTNhom\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojAssemblyReference.cache
-D:\TTNhom\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Form1.resources
 D:\TTNhom\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmLogin.resources
 D:\TTNhom\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmMain.resources
 D:\TTNhom\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
@@ -37,3 +36,4 @@ C:\Users\LOCALBOI\Source\Repos\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\Quan
 C:\Users\LOCALBOI\Source\Repos\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
 C:\Users\LOCALBOI\Source\Repos\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 C:\Users\LOCALBOI\Source\Repos\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+D:\TTNhom\TTN_QLNS\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Formtimkiem.resources

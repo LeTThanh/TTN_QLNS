@@ -19,38 +19,38 @@ namespace QuanLyNhanSu
             InitializeComponent();
         }
 
-        string sqlquery_timkiem()
-        {
-            if (radioButton_chucvu.Checked == true)
-            {
-                return "SELECT * FROM NHANVIEN WHERE MANV ='"+textBox_timkiem.Text+"'";
-            }
-            else if(radioButton_manv.Checked==true)
-            {
-                return "SELECT * FROM NHANVIEN WHERE MANV ='" + textBox_timkiem.Text + "'";
-            }
-            else if(radioButton_mapb.Checked==true)
-            {
-                return "SELECT * FROM NHANVIEN WHERE MAPB ='" + textBox_timkiem.Text + "'";
-            }
-            else if(radioButton_Tennv.Checked==true)
-            { return "SELECT * FROM NHANVIEN WHERE TENNV LIKE % '" + textBox_timkiem.Text + "'"; }    
-            else
-                return "lolo";
-        DataSet GetData()
-        {
-            DataSet data = new DataSet();
-            using(SqlConnection connection = new SqlConnection())
-            {
-                connection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                connection.Close();
+        //string sqlquery_timkiem()
+        //{
+        //    if (radioButton_chucvu.Checked == true)
+        //    {
+        //        return "SELECT * FROM NHANVIEN WHERE MANV ='"+textBox_timkiem.Text+"'";
+        //    }
+        //    else if(radioButton_manv.Checked==true)
+        //    {
+        //        return "SELECT * FROM NHANVIEN WHERE MANV ='" + textBox_timkiem.Text + "'";
+        //    }
+        //    else if(radioButton_mapb.Checked==true)
+        //    {
+        //        return "SELECT * FROM NHANVIEN WHERE MAPB ='" + textBox_timkiem.Text + "'";
+        //    }
+        //    else if(radioButton_Tennv.Checked==true)
+        //    { return "SELECT * FROM NHANVIEN WHERE TENNV LIKE % '" + textBox_timkiem.Text + "'"; }    
+        //    else
+        //        return "lolo";
+        //DataSet GetData()
+        //{
+        //    DataSet data = new DataSet();
+        //    using(SqlConnection connection = new SqlConnection())
+        //    {
+        //        connection.Open();
+        //        SqlDataAdapter adapter = new SqlDataAdapter();
+        //        connection.Close();
 
-            }    
-        }
+        //    }    
+        //}
         private void button_timkiem_Click(object sender, EventArgs e)
         {
-            dataGridView_timkiem.DataSource = GetData();
+            //dataGridView_timkiem.DataSource = GetData();
         }
     }
 }
