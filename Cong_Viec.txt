@@ -1,0 +1,7 @@
+--Quản lý nhân viên : Thêm sửa xóa ,tìm kiếmnhân viên
+--Quản lý phòng ban : Thêm sửa xóa,tìm kiếm Phòng bàn + Cơ cấu phòng ban(Nhân viên theo phòng ban, chức vụ từng nhân viên,vị trí công tác )
+--Quản lý chức vụ : Thêm sửa xóa, tìm kiếm chức vụ
+--Quản lý vị trí công tác: Thêm sửa xóa ,tìm kiếm vị trí công tác 
+--Lương: Lương theo cá nhân + Lương theo phòng ban(TongLuong = Lương cơ bản + lương thưởng + sô ngày tăng ca*50000)
+--Hợp đòng lao động: Thêm, sửa , xóa , tìm kiếm , gia hạn (gia hạn thêm 1 năm)
+
