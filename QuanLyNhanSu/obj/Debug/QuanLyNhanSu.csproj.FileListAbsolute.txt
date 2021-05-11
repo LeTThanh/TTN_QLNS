@@ -37,3 +37,22 @@ C:\Users\minht\Source\Repos\LeTThanh\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanS
 C:\Users\minht\Source\Repos\LeTThanh\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CopyComplete
 C:\Users\minht\Source\Repos\LeTThanh\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 C:\Users\minht\Source\Repos\LeTThanh\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojAssemblyReference.cache
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormChucVu.resources
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormCoCauPhongBan.resources
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormHopDong.resources
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormLuong_CaNhan.resources
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormLuong_PB.resources
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormMain.resources
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormNhanVien.resources
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormPhongBan.resources
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormVTCV.resources
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.cache
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CopyComplete
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
