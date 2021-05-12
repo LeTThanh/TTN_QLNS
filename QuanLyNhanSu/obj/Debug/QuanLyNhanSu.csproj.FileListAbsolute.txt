@@ -56,3 +56,22 @@ G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCo
 G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CopyComplete
 G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 G:\Thực tập nhóm\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojAssemblyReference.cache
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormChucVu.resources
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormCoCauPhongBan.resources
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormHopDong.resources
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormLuong_CaNhan.resources
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormLuong_PB.resources
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormMain.resources
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormNhanVien.resources
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormPhongBan.resources
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormVTCV.resources
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.cache
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CopyComplete
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+C:\Users\huyho\OneDrive\Desktop\QLNS\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
