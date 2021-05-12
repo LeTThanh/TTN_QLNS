@@ -11,8 +11,14 @@ using System.Windows.Forms;
 
 namespace QuanLyNhanSu
 {
+
     public partial class FormHopDong : Form
     {
+        string manv;
+        string tenhd;
+        DateTime ngayki;
+        DateTime ngayketthuc;
+        string mahd;
         public FormHopDong()
         {
             InitializeComponent();
@@ -100,6 +106,62 @@ namespace QuanLyNhanSu
         {
             string que = "Select * from HDLD";
             guna2DataGridView1.DataSource = ExecuteQuery(que);
+        }
+
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (guna2DataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                DataGridViewRow row = this.guna2DataGridView1.Rows[e.RowIndex];
+                guna2TextBox1.Text = row.Cells["MaNV"].Value.ToString();
+                guna2TextBox4.Text = row.Cells["MaHD"].Value.ToString();
+                guna2TextBox5.Text = row.Cells["TenHD"].Value.ToString();
+                guna2DateTimePicker1.Value = Convert.ToDateTime(row.Cells["NgayKiHopDong"].Value);
+                guna2DateTimePicker2.Value = Convert.ToDateTime(row.Cells["NgayKetThucKiHopDong"].Value);
+            }
+        }
+        public void x()
+        {
+            manv = guna2TextBox1.Text;
+            tenhd = guna2TextBox5.Text;
+            mahd = guna2TextBox4.Text;
+            ngayki = guna2DateTimePicker1.Value;
+            ngayketthuc = guna2DateTimePicker2.Value;
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            //thêm
+            x();
+            string que = @"Insert into HDLD (MaNV, MaHD, TenHD, NgayKiHopDong, NgayKetThucKiHopDong) values( N'"
+                + manv + "', N'" + mahd + "', N'"+ tenhd + "', '" + ngayki.ToString("MM/dd/yyyy") + "', '" + ngayketthuc.ToString("MM/dd/yyyy") + "')";
+            int i = -1;
+            i = ExecuteNonQuery(que);
+            if (i != -1)
+            {
+                MessageBox.Show("Thêm Thành Công");
+                load();
+            }
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            //sửa
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            //xóa
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            //gia hạn
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            //tìm kiếm
         }
     }
 }
