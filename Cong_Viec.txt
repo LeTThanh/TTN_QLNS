@@ -3,5 +3,5 @@
 --Quản lý chức vụ : Thêm sửa xóa, tìm kiếm chức vụ   (Quang Anh)
 --Quản lý vị trí công tác: Thêm sửa xóa ,tìm kiếm vị trí công tác (Quang)
 --Lương: Lương theo cá nhân + Lương theo phòng ban(TongLuong = Lương cơ bản + lương thưởng + sô ngày tăng ca*50000)
---Hợp đòng lao động: Thêm, sửa , xóa , tìm kiếm , gia hạn (gia hạn thêm 1 năm)
+--Hợp đòng lao động: Thêm, sửa , xóa , tìm kiếm , gia hạn (gia hạn thêm 1 năm) HA
 
