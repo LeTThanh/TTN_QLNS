@@ -59,7 +59,7 @@ namespace QuanLyNhanSu
                 using (SqlConnection sqlcon = new SqlConnection(constr))
                 {
                     sqlcon.Open();
-                    SqlCommand command = new SqlCommand("execute xoa1NV N'" + guna2TextBox_manv.Text + "'", sqlcon);
+                    SqlCommand command = new SqlCommand("execute xoaNV N'" + guna2TextBox_manv.Text + "'", sqlcon);
                     sqlcon.InfoMessage += new SqlInfoMessageEventHandler(InfoMessageHandler);
                     command.ExecuteNonQuery();
                     sqlcon.Close();
