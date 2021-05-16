@@ -33,6 +33,21 @@ namespace QuanLyNhanSu
                 dgv_Info.DataSource = table;
             }
         }
+        void init_PB()
+        {
+            using (SqlConnection con = new SqlConnection(conStr.str))
+            {
+                con.Open();
+                string query = "Select TenPB From PHONGBAN";
+                SqlCommand cmd = new SqlCommand(query, con);
+                DataTable table = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(table);
+                gcb_ListPB.DataSource = table;
+                gcb_ListPB.DisplayMember = "TenPB";
+            }
+        }
+
         public FormLuong_PB()
         {
             InitializeComponent();
@@ -63,6 +78,7 @@ namespace QuanLyNhanSu
         private void FormLuong_PB_Load(object sender, EventArgs e)
         {
             init_Info();
+            init_PB();
         }
 
         private void dgv_Info_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -74,6 +90,36 @@ namespace QuanLyNhanSu
             gtb_NgayTangCa.Text = dgv_Info.CurrentRow.Cells[4].Value.ToString();
             gtb_GhiChu.Text = dgv_Info.CurrentRow.Cells[5].Value.ToString();
             gtb_TongLuong.Text = dgv_Info.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void gb_Xem_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(conStr.str))
+            {
+                con.Open();
+                string query = "Select	n.MaNV as 'Mã NV'," +
+                                "HoTen as 'Họ Tên'," +
+                                "LuongCB as 'Lương Cơ Bản'," +
+                                "LuongThuong as 'Lương Thưởng'," +
+                                "SoNgayTangCa as 'Ngày Tăng Ca'," +
+                                "GhiChu as 'Ghi Chú'," +
+                                "(LuongCB + ISNULL(LuongThuong, 0) + (ISNULL(SoNgayTangCa, 0) * 50000)) as 'Tổng Lương'" +
+                                "From NHANVIEN n, PHONGBAN p, LUONG l " +
+                                "Where n.MaPB=p.MaPB and n.MaNV=l.MaNV " +
+                                "and p.TenPB = N'" + gcb_ListPB.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, con);
+                DataTable table = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(table);
+                dgv_Info.DataSource = table;
+            }
+            long total = 0;
+            for (int i = 0; i < dgv_Info.Rows.Count - 1; i++)
+            {
+                long salary = long.Parse(dgv_Info.Rows[i].Cells[6].Value.ToString());
+                total += salary;
+            }
+            gtb_TotalAll.Text = total.ToString() + " vnđ";
         }
     }
 }
