@@ -95,7 +95,7 @@ namespace QuanLyNhanSu
 
                     acceptedRows = command.ExecuteNonQuery();
                 }
-                catch { MessageBox.Show("Lỗi Dữ Liệu"); }
+                catch { MessageBox.Show("Nhập Sai!!!"); }
                 connection.Close();
             }
 
@@ -122,9 +122,18 @@ namespace QuanLyNhanSu
         }
         public void x()
         {
-            manv = guna2TextBox1.Text;
-            tenhd = guna2TextBox5.Text;
-            mahd = guna2TextBox4.Text;
+            if(guna2TextBox1.Text != null)
+            {
+                manv = guna2TextBox1.Text;
+            }
+            if (guna2TextBox5.Text != null)
+            {
+                tenhd = guna2TextBox5.Text;
+            }
+            if (guna2TextBox4.Text != null)
+            {
+                mahd = guna2TextBox4.Text;
+            }
             ngayki = guna2DateTimePicker1.Value;
             ngayketthuc = guna2DateTimePicker2.Value;
         }
@@ -133,6 +142,11 @@ namespace QuanLyNhanSu
         {
             //thêm
             x();
+            if(manv == null || tenhd == null || mahd == null || ngayki == null|| ngayketthuc == null)
+            {
+                MessageBox.Show("Không được để trống trường dữ liệu");
+                return;
+            }
             string que = @"Insert into HDLD (MaNV, MaHD, TenHD, NgayKiHopDong, NgayKetThucKiHopDong) values( N'"
                 + manv + "', N'" + mahd + "', N'"+ tenhd + "', '" + ngayki.ToString("MM/dd/yyyy") + "', '" + ngayketthuc.ToString("MM/dd/yyyy") + "')";
             int i = -1;
@@ -141,27 +155,119 @@ namespace QuanLyNhanSu
             {
                 MessageBox.Show("Thêm Thành Công");
                 load();
+                guna2TextBox1.Text = "";
+                guna2TextBox4.Text = "";
+                guna2TextBox5.Text = "";
             }
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             //sửa
+            x();
+            if (manv == null || tenhd == null || mahd == null || ngayki == null || ngayketthuc == null)
+            {
+                MessageBox.Show("Không được để trống trường dữ liệu");
+                return;
+            }
+            string que = @"update HDLD set MaNV = N'" + manv + "', TenHD = N'" + tenhd + "', " +
+                "NgayKiHopDong = '" + ngayki.ToString("MM/dd/yyyy") + "', " +
+                "NgayKetThucKiHopDong = '" + ngayketthuc.ToString("MM/dd/yyyy") + "' where MaHD = N'" + mahd + "'";
+            int i = -1;
+            i = ExecuteNonQuery(que);
+            if (i != -1)
+            {
+                MessageBox.Show("Sửa Thành Công");
+                load();
+                guna2TextBox1.Text = "";
+                guna2TextBox4.Text = "";
+                guna2TextBox5.Text = "";
+            }
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             //xóa
+            x();
+            if (manv == null)
+            {
+                MessageBox.Show("Không được để trống mã nhân viên");
+                return;
+            }
+            string que = @"delete from HDLD where MaHD = N'" + mahd + "'";
+            int i = -1;
+            i = ExecuteNonQuery(que);
+            if (i != -1)
+            {
+                MessageBox.Show("Xóa Thành Công");
+                load();
+                guna2TextBox1.Text = "";
+                guna2TextBox4.Text = "";
+                guna2TextBox5.Text = "";
+            }
         }
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             //gia hạn
+            x();
+            if (manv == null)
+            {
+                MessageBox.Show("Nhập mã nhân viên");
+                return;
+            }
+            if (ngayketthuc == null)
+            {
+                MessageBox.Show("Nhân viên chưa có ngày kết thúc hợp đồng");
+                return;
+            }
+            string que = @"select NgayKetThucKiHopDong from HDLD where MaHD = N'" + mahd + "'";
+            DataTable dt = ExecuteQuery(que);
+            DateTime ngaygiahan = Convert.ToDateTime(dt.Rows[0]["NgayKetThucKiHopDong"].ToString());
+            string ng = Convert.ToString(ngaygiahan.Day);
+            if (ng.Length == 1)
+            {
+                ng = "0" + ng;
+            }
+            string th = Convert.ToString(ngaygiahan.Month);
+            if (th.Length == 1)
+            {
+                th = "0" + th;
+            }
+            int nm = ngaygiahan.Year;
+            nm++;
+            string ngaymoi = th + "/" + ng + "/" + Convert.ToString(nm);
+            string query = @"update HDLD set NgayKetThucKiHopDong = '" + ngaymoi + "' where MaHD = N'" + mahd + "'";
+            int i = -1;
+            i = ExecuteNonQuery(query);
+            if (i != -1)
+            {
+                MessageBox.Show("Gia Hạn Thêm 1 Năm Thành Công");
+                load();
+                guna2TextBox1.Text = "";
+                guna2TextBox4.Text = "";
+                guna2TextBox5.Text = "";
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             //tìm kiếm
+            string que = "";
+            if(guna2RadioButton1.Checked == true)
+            {
+                que = "select * from HDLD where MaHD like N'%" + guna2TextBox6.Text + "%'";
+            }
+            if (guna2RadioButton2.Checked == true)
+            {
+                que = "select * from HDLD where TenHD like N'%" + guna2TextBox6.Text + "%'";
+            }
+            if(que == "")
+            {
+                MessageBox.Show("Chọn trường cần tìm kiếm");
+                return;
+            }
+            guna2DataGridView1.DataSource = ExecuteQuery(que);
         }
     }
 }
