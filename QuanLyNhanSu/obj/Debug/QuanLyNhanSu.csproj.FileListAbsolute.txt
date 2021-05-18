@@ -94,3 +94,22 @@ D:\TTNhom\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.
 D:\TTNhom\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CopyComplete
 D:\TTNhom\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 D:\TTNhom\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojAssemblyReference.cache
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormChucVu.resources
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormCoCauPhongBan.resources
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormHopDong.resources
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormLuong_CaNhan.resources
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormLuong_PB.resources
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormMain.resources
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormNhanVien.resources
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormPhongBan.resources
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormVTCV.resources
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.cache
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CopyComplete
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
