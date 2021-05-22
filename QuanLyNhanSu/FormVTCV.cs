@@ -133,8 +133,6 @@ namespace QuanLyNhanSu
                         Hienthi();
                         if (con.State == ConnectionState.Open)
                             con.Close();
-                        if (con.State == ConnectionState.Open)
-                            con.Close();
                     }
                     catch (Exception ex)
                     {
