@@ -11,13 +11,15 @@ using System.Windows.Forms;
 namespace QuanLyNhanSu
 {
     public partial class FormMain : Form
-    {
+    {   
         private Form activeForm = new Form();
         public FormMain()
         {
             InitializeComponent();
+            labelUsername.Text = Program.usernamelogin;
             customizeDesign();
             panel_Leftside.Visible = false;
+            openForm(new FormNhanVien());
         }
 
         private void customizeDesign()
@@ -61,7 +63,6 @@ namespace QuanLyNhanSu
         private void btn_PhongBan_Click(object sender, EventArgs e)
         {
             openForm(new FormPhongBan());
-            hideSubmenu();
             label4.Text = "Quản lý phòng ban";
             
         }
@@ -69,21 +70,18 @@ namespace QuanLyNhanSu
         private void btn_ChucVu_Click(object sender, EventArgs e)
         {
             openForm(new FormChucVu());
-            hideSubmenu();
             label4.Text = "Quản lý chức vụ"; ;
         }
 
         private void btn_NhanVien_Click(object sender, EventArgs e)
         {
             openForm(new FormNhanVien());
-            hideSubmenu();
             label4.Text = "Quản lý nhân viên";
         }
 
         private void btn_VTCV_Click(object sender, EventArgs e)
         {
             openForm(new FormVTCV());
-            hideSubmenu();
             label4.Text = "Quản lý Vị trí công tác";
         }
         #endregion QuanLySubmenu
@@ -97,14 +95,12 @@ namespace QuanLyNhanSu
         private void btnBL_CaNhan_Click(object sender, EventArgs e)
         {
             openForm(new FormLuong_CaNhan());
-            hideSubmenu();
             label4.Text = "Bảng lương cá nhân";
         }
 
         private void btnBL_PhongBan_Click(object sender, EventArgs e)
         {
             openForm(new FormLuong_PB());
-            hideSubmenu();
             label4.Text = "Bảng lương phòng ban";
             
         }
@@ -125,21 +121,21 @@ namespace QuanLyNhanSu
         #region TaiKhoanSubmenu
         private void btnTK_DoiMK_Click(object sender, EventArgs e)
         {
-            hideSubmenu();
+            openForm(new FormDoiMK());
             label4.Text = "Đổi mật khẩu";
 
         }
 
         private void btnTK_ThemTK_Click(object sender, EventArgs e)
         {
-            hideSubmenu();
+            openForm(new FormThemTK());
             label4.Text = "Thêm tài khoản";
         }
 
-        private void btn_TroGiup_Click(object sender, EventArgs e)
+        private void btnThongTinTK_Click(object sender, EventArgs e)
         {
-            hideSubmenu();
-            label4.Text = "Trợ giúp";
+            openForm(new FormThongTinTK());
+            label4.Text = "Thông tin tài khoản";
         }
         #endregion TaiKhoanSubmenu
         private void btn_DangXuat_Click(object sender, EventArgs e)
@@ -155,7 +151,7 @@ namespace QuanLyNhanSu
 
         private void panel_Logo_Paint(object sender, PaintEventArgs e)
         {
-            label4.Text = "Home";
+            label4.Text = "Quản lý nhân viên";
         }
 
         public void openForm(Form form)
@@ -179,6 +175,12 @@ namespace QuanLyNhanSu
             openForm(new FormCoCauPhongBan());
             label4.Text = "Cơ cấu phòng ban";
             position(btnCoCauPB);
+        }
+
+        private void panel_Logo_Click(object sender, EventArgs e)
+        {
+            openForm(new FormNhanVien());
+            label4.Text = "Quản lý nhân viên";
         }
     }
 }

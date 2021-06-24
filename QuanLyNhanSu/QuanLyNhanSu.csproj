@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\Users\admin\Desktop\Bunifu Lastest Components\Bunifu UI WinForms v4.1.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\Guna_UI_Framework_Ultimate_2.0.0.1_Downloadly.ir\Guna_UI_v2.0.0.6\Guna.UI2.WinForms_v2.0.0.6\.net 2.0\Guna.UI2.dll</HintPath>
     </Reference>
@@ -53,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conStr.cs" />
+    <Compile Include="DataProvider.cs" />
     <Compile Include="FormChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +68,18 @@
     </Compile>
     <Compile Include="FormCoCauPhongBan.Designer.cs">
       <DependentUpon>FormCoCauPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDoiMK.Designer.cs">
+      <DependentUpon>FormDoiMK.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHopDong.cs">
       <SubType>Form</SubType>
@@ -101,6 +117,18 @@
     <Compile Include="FormPhongBan.Designer.cs">
       <DependentUpon>FormPhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThemTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemTK.Designer.cs">
+      <DependentUpon>FormThemTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThongTinTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTinTK.Designer.cs">
+      <DependentUpon>FormThongTinTK.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVTCV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +142,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCoCauPhongBan.resx">
       <DependentUpon>FormCoCauPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDoiMK.resx">
+      <DependentUpon>FormDoiMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHopDong.resx">
       <DependentUpon>FormHopDong.cs</DependentUpon>
@@ -133,9 +167,16 @@
     <EmbeddedResource Include="FormPhongBan.resx">
       <DependentUpon>FormPhongBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormThemTK.resx">
+      <DependentUpon>FormThemTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongTinTK.resx">
+      <DependentUpon>FormThongTinTK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormVTCV.resx">
       <DependentUpon>FormVTCV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

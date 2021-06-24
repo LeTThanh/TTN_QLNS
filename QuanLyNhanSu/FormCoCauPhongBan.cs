@@ -147,35 +147,35 @@ namespace QuanLyNhanSu
             }    
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            if (guna2ComboBox1.SelectedIndex == 0)
-            {
-                //show all
-                string que = "Select pb.tenpb, hoten, TenCV, vt.TenVT, ngaysinh, nv.diachi, gioitinh " +
-           "from NHANVIEN nv left " +
-           "join PHONGBAN pb on nv.MaPB = pb.MaPB left " +
-           " join NHANVIEN_CHUCVU nvc on nvc.MaNV = nv.MaNV left " +
-           "join CHUCVU cv on cv.MaCV = nvc.MaCV left " +
-           "join NHANVIEN_VITRI nvt on nvt.MaNV = nv.MaNV left " +
-           "join VITRICONGVIEC vt on vt.MaVT = nvt.MaVT " +
-           "order by pb.TenPB";
-                guna2DataGridView1.DataSource = ExecuteQuery(que);
-            }
-            else
-            {
-                //theo mã pb
-                string que = "Select pb.tenpb, hoten, TenCV, vt.TenVT, ngaysinh, nv.diachi, gioitinh " +
-           "from NHANVIEN nv left " +
-           "join PHONGBAN pb on nv.MaPB = pb.MaPB left " +
-           " join NHANVIEN_CHUCVU nvc on nvc.MaNV = nv.MaNV left " +
-           "join CHUCVU cv on cv.MaCV = nvc.MaCV left " +
-           "join NHANVIEN_VITRI nvt on nvt.MaNV = nv.MaNV left " +
-           "join VITRICONGVIEC vt on vt.MaVT = nvt.MaVT " +
-           "where pb.MaPB='" + guna2ComboBox1.Text + "' " +
-           "order by pb.TenPB";
-                guna2DataGridView1.DataSource = ExecuteQuery(que);
-            }
-        }
+        //private void guna2Button1_Click(object sender, EventArgs e)
+        //{
+        //    if (guna2ComboBox1.SelectedIndex == 0)
+        //    {
+        //        //show all
+        //        string que = "Select pb.tenpb, hoten, TenCV, vt.TenVT, ngaysinh, nv.diachi, gioitinh " +
+        //   "from NHANVIEN nv left " +
+        //   "join PHONGBAN pb on nv.MaPB = pb.MaPB left " +
+        //   " join NHANVIEN_CHUCVU nvc on nvc.MaNV = nv.MaNV left " +
+        //   "join CHUCVU cv on cv.MaCV = nvc.MaCV left " +
+        //   "join NHANVIEN_VITRI nvt on nvt.MaNV = nv.MaNV left " +
+        //   "join VITRICONGVIEC vt on vt.MaVT = nvt.MaVT " +
+        //   "order by pb.TenPB";
+        //        guna2DataGridView1.DataSource = ExecuteQuery(que);
+        //    }
+        //    else
+        //    {
+        //        //theo mã pb
+        //        string que = "Select pb.tenpb, hoten, TenCV, vt.TenVT, ngaysinh, nv.diachi, gioitinh " +
+        //   "from NHANVIEN nv left " +
+        //   "join PHONGBAN pb on nv.MaPB = pb.MaPB left " +
+        //   " join NHANVIEN_CHUCVU nvc on nvc.MaNV = nv.MaNV left " +
+        //   "join CHUCVU cv on cv.MaCV = nvc.MaCV left " +
+        //   "join NHANVIEN_VITRI nvt on nvt.MaNV = nv.MaNV left " +
+        //   "join VITRICONGVIEC vt on vt.MaVT = nvt.MaVT " +
+        //   "where pb.MaPB='" + guna2ComboBox1.Text + "' " +
+        //   "order by pb.TenPB";
+        //        guna2DataGridView1.DataSource = ExecuteQuery(que);
+        //    }
+        //}
     }
 }

@@ -35,7 +35,7 @@ namespace QuanLyNhanSu
             this.panel_Leftside = new System.Windows.Forms.Panel();
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.panel_TaiKhoanSubmenu = new System.Windows.Forms.Panel();
-            this.btn_TroGiup = new System.Windows.Forms.Button();
+            this.btnThongTinTK = new System.Windows.Forms.Button();
             this.btnTK_ThemTK = new System.Windows.Forms.Button();
             this.btnTK_DoiMK = new System.Windows.Forms.Button();
             this.btn_TaiKhoan = new System.Windows.Forms.Button();
@@ -51,11 +51,11 @@ namespace QuanLyNhanSu
             this.btn_PhongBan = new System.Windows.Forms.Button();
             this.btn_QuanLy = new System.Windows.Forms.Button();
             this.panel_Logo = new System.Windows.Forms.Panel();
-            this.labelHome = new System.Windows.Forms.Label();
             this.panel_Main = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelUsername = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label_TenNV = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,7 +63,6 @@ namespace QuanLyNhanSu
             this.panel_TaiKhoanSubmenu.SuspendLayout();
             this.panel_LuongSubmenu.SuspendLayout();
             this.panel_QuanLySubmenu.SuspendLayout();
-            this.panel_Logo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -95,7 +94,7 @@ namespace QuanLyNhanSu
             this.btnCoCauPB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCoCauPB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCoCauPB.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btnCoCauPB.Location = new System.Drawing.Point(0, 591);
+            this.btnCoCauPB.Location = new System.Drawing.Point(0, 604);
             this.btnCoCauPB.Name = "btnCoCauPB";
             this.btnCoCauPB.Size = new System.Drawing.Size(181, 38);
             this.btnCoCauPB.TabIndex = 8;
@@ -129,31 +128,31 @@ namespace QuanLyNhanSu
             // panel_TaiKhoanSubmenu
             // 
             this.panel_TaiKhoanSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            this.panel_TaiKhoanSubmenu.Controls.Add(this.btn_TroGiup);
+            this.panel_TaiKhoanSubmenu.Controls.Add(this.btnThongTinTK);
             this.panel_TaiKhoanSubmenu.Controls.Add(this.btnTK_ThemTK);
             this.panel_TaiKhoanSubmenu.Controls.Add(this.btnTK_DoiMK);
             this.panel_TaiKhoanSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_TaiKhoanSubmenu.Location = new System.Drawing.Point(0, 480);
             this.panel_TaiKhoanSubmenu.Name = "panel_TaiKhoanSubmenu";
-            this.panel_TaiKhoanSubmenu.Size = new System.Drawing.Size(181, 111);
+            this.panel_TaiKhoanSubmenu.Size = new System.Drawing.Size(181, 124);
             this.panel_TaiKhoanSubmenu.TabIndex = 6;
             // 
-            // btn_TroGiup
+            // btnThongTinTK
             // 
-            this.btn_TroGiup.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_TroGiup.FlatAppearance.BorderSize = 0;
-            this.btn_TroGiup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TroGiup.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TroGiup.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btn_TroGiup.Location = new System.Drawing.Point(0, 76);
-            this.btn_TroGiup.Name = "btn_TroGiup";
-            this.btn_TroGiup.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btn_TroGiup.Size = new System.Drawing.Size(181, 38);
-            this.btn_TroGiup.TabIndex = 4;
-            this.btn_TroGiup.Text = "Trợ giúp";
-            this.btn_TroGiup.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_TroGiup.UseVisualStyleBackColor = true;
-            this.btn_TroGiup.Click += new System.EventHandler(this.btn_TroGiup_Click);
+            this.btnThongTinTK.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongTinTK.FlatAppearance.BorderSize = 0;
+            this.btnThongTinTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongTinTK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongTinTK.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btnThongTinTK.Location = new System.Drawing.Point(0, 76);
+            this.btnThongTinTK.Name = "btnThongTinTK";
+            this.btnThongTinTK.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnThongTinTK.Size = new System.Drawing.Size(181, 41);
+            this.btnThongTinTK.TabIndex = 5;
+            this.btnThongTinTK.Text = "Thông tin TK";
+            this.btnThongTinTK.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongTinTK.UseVisualStyleBackColor = true;
+            this.btnThongTinTK.Click += new System.EventHandler(this.btnThongTinTK_Click);
             // 
             // btnTK_ThemTK
             // 
@@ -388,23 +387,13 @@ namespace QuanLyNhanSu
             this.panel_Logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(250)))));
             this.panel_Logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_Logo.BackgroundImage")));
             this.panel_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel_Logo.Controls.Add(this.labelHome);
             this.panel_Logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Logo.Location = new System.Drawing.Point(0, 0);
             this.panel_Logo.Name = "panel_Logo";
             this.panel_Logo.Size = new System.Drawing.Size(181, 101);
             this.panel_Logo.TabIndex = 1;
+            this.panel_Logo.Click += new System.EventHandler(this.panel_Logo_Click);
             this.panel_Logo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Logo_Paint);
-            // 
-            // labelHome
-            // 
-            this.labelHome.AutoSize = true;
-            this.labelHome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelHome.Location = new System.Drawing.Point(71, 85);
-            this.labelHome.Name = "labelHome";
-            this.labelHome.Size = new System.Drawing.Size(35, 13);
-            this.labelHome.TabIndex = 4;
-            this.labelHome.Text = "Home";
             // 
             // panel_Main
             // 
@@ -439,6 +428,7 @@ namespace QuanLyNhanSu
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(250)))));
+            this.panel2.Controls.Add(this.labelUsername);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label_TenNV);
             this.panel2.Controls.Add(this.label2);
@@ -446,6 +436,16 @@ namespace QuanLyNhanSu
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(954, 53);
             this.panel2.TabIndex = 2;
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelUsername.Location = new System.Drawing.Point(773, 20);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(0, 20);
+            this.labelUsername.TabIndex = 3;
             // 
             // label4
             // 
@@ -490,13 +490,11 @@ namespace QuanLyNhanSu
             this.MinimumSize = new System.Drawing.Size(1150, 650);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMain";
+            this.Text = "Phần mềm quản lý nhân sự";
             this.panel_Slide.ResumeLayout(false);
             this.panel_TaiKhoanSubmenu.ResumeLayout(false);
             this.panel_LuongSubmenu.ResumeLayout(false);
             this.panel_QuanLySubmenu.ResumeLayout(false);
-            this.panel_Logo.ResumeLayout(false);
-            this.panel_Logo.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -520,7 +518,6 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.Panel panel_Main;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel_TaiKhoanSubmenu;
-        private System.Windows.Forms.Button btn_TroGiup;
         private System.Windows.Forms.Button btnTK_ThemTK;
         private System.Windows.Forms.Button btnTK_DoiMK;
         private System.Windows.Forms.Button btn_TaiKhoan;
@@ -535,8 +532,9 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.Button btn_ChucVu;
         private System.Windows.Forms.Button btn_PhongBan;
         private System.Windows.Forms.Button btn_QuanLy;
-        private System.Windows.Forms.Label labelHome;
         private System.Windows.Forms.Button btnCoCauPB;
+        private System.Windows.Forms.Label labelUsername;
+        private System.Windows.Forms.Button btnThongTinTK;
     }
 }
 

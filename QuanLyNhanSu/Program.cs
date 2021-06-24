@@ -11,12 +11,14 @@ namespace QuanLyNhanSu
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static string usernamelogin = "";
+        public static string manvlogin = "";
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            Application.Run(new FormDangNhap());
         }
     }
 }

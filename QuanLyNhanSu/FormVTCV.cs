@@ -17,6 +17,7 @@ namespace QuanLyNhanSu
         public FormVTCV()
         {
             InitializeComponent();
+            Hienthi();
         }
          void Hienthi()
         {

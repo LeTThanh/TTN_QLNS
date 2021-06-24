@@ -113,3 +113,30 @@ D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLy
 D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CopyComplete
 D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 D:\Kì 2 năm 3\Thức tập nhóm\BaiTT1\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojAssemblyReference.cache
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormChucVu.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormCoCauPhongBan.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormHopDong.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormLuong_CaNhan.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormLuong_PB.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormMain.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormNhanVien.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormPhongBan.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormVTCV.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.cache
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CopyComplete
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormDangNhap.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\bin\Debug\Bunifu.Licensing.dll
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe.config
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe.licenses
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormDoiMK.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormThemTK.resources
+C:\GITHUB\TTN_QLNS\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.FormThongTinTK.resources

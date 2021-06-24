@@ -77,4 +77,3 @@ delete DANGNHAP where MaNV =@ma
 delete NHANVIEN_VITRI where MaNV =@ma
 delete HDLD where MaNV =@ma
 end
-delete NHANVIEN where MaNV ='NV24'

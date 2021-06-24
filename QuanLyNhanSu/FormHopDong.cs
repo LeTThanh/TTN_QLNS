@@ -24,7 +24,7 @@ namespace QuanLyNhanSu
             InitializeComponent();
             load();
         }
-        string ConnectionString = @"Data Source=LAPTOP-9PE5ABV1\SQLEXPRESS;Initial Catalog=QuanLyNhanSu1;Integrated Security=True";
+        string ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyNhanSu1;Integrated Security=True";
         DataTable ExecuteQuery(string query, object[] parameter = null)
         {
 

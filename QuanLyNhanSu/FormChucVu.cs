@@ -14,7 +14,7 @@ namespace QuanLyNhanSu
 
     public partial class FormChucVu : Form
     {
-        string ConnectionString = @"Data Source=DESKTOP-53IQ0S1\SQLEXPRESS;Initial Catalog=QuanLyNhanSu1;Integrated Security=True";
+        string ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyNhanSu1;Integrated Security=True";
         public FormChucVu()
         {
             InitializeComponent();
@@ -113,7 +113,7 @@ namespace QuanLyNhanSu
 
         private void LoadInformation()
         {
-            string connectionSTR = @"Data Source=DESKTOP-53IQ0S1\SQLEXPRESS;Initial Catalog=QuanLyNhanSu1;Integrated Security=True";
+            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyNhanSu1;Integrated Security=True";
             SqlConnection connection = new SqlConnection(connectionSTR);
             string query = "select * from CHUCVU";
             connection.Open();
