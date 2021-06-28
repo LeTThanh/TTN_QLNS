@@ -7,6 +7,8 @@ if(select COUNT(*)from NHANVIEN where MANV =@MA)=0
 print(N'Không có nhân viên này mời nhập lại thông tin')
 else
 begin
+delete from NHANVIEN_CHUCVU where MaNV=@ma
+delete from NHANVIEN_VITRI where MaNV=@ma
 delete NHANVIEN where MANV=@ma
 print(N'Xóa nhân viên thành công')
 end
@@ -15,7 +17,7 @@ GO
 
 
 
-CREATE OR ALTER         proc [dbo].[Capnhatthongtin] (@MANV nchar(10),@HOTEN nvarchar(50), @bangcap nvarchar(50),@GIOITINH nchar(3) ,@Ngaysinh date,@DIACHI nvarchar(200), @mapb nchar(10), @CMTND nchar(20), @SDT nchar(11) , @dantoc nvarchar(11), @tongiao nvarchar(11), @manv_cu nchar(10))
+CREATE OR ALTER         proc [dbo].[Capnhatthongtin] (@MANV nchar(10),@HOTEN nvarchar(50), @bangcap nvarchar(50),@GIOITINH nchar(3) ,@Ngaysinh date,@DIACHI nvarchar(200), @mapb nchar(10), @CMTND nchar(20), @SDT nchar(11) , @dantoc nvarchar(11), @tongiao nvarchar(11),@VTCV nvarchar(10),@MaCV nvarchar(10), @manv_cu nchar(10))
 as begin
 if(select count(manv)from NHANVIEN where MANV= @manv_cu)=0
 print(N'Không có nhân viên cần sửa')
@@ -27,6 +29,8 @@ update NHANVIEN set MANV=@MANV,  HOTEN=@HOTEN, BangCap=@bangcap,
                                    GIOITINH=@GIOITINH,
      DIACHI=@DIACHI, DanToc=@dantoc, MaPB=@mapb, CMTND=@CMTND, TonGiao=@tongiao
 where MANV=@manv_cu
+update NHANVIEN_CHUCVU set MaCV = @MaCV where MaNV=@manv_cu
+update NHANVIEN_VITRI set MaVT = @VTCV where MaNV=@manv_cu
 print(N'Đã sửa thông tin nhân viên thành công')
 end
 end
@@ -35,7 +39,7 @@ GO
 
 
 CREATE OR ALTER    proc [dbo].[themNV]
-@MANV nchar(10),@HOTEN nvarchar(50), @bangcap nvarchar(50),@GIOITINH nchar(3) ,@Ngaysinh date,@DIACHI nvarchar(200), @mapb nchar(10), @CMTND nchar(20), @SDT nchar(11) , @dantoc nvarchar(11), @tongiao nvarchar(11)
+@MANV nchar(10),@HOTEN nvarchar(50), @bangcap nvarchar(50),@GIOITINH nchar(3) ,@Ngaysinh date,@DIACHI nvarchar(200), @mapb nchar(10), @CMTND nchar(20), @SDT nchar(11) , @dantoc nvarchar(11), @tongiao nvarchar(11),@VTCV nvarchar(10),@MaCV nvarchar(10)
 as begin 
 if(select COUNT(*)from NHANVIEN where MANV =@MANV)>0
 begin
@@ -46,6 +50,8 @@ begin
 insert  into dbo.NHANVIEN(MANV,HoTen, BangCap,GIOITINH,NGAYSINH,DIACHI, MaPB, CMTND,SDT,DanToc,
 TonGiao)
 values(@MANV,@HOTEN,@bangcap,@GIOITINH,@NGAYSINH,@DIACHI, @mapb, @CMTND,@SDT, @dantoc,@tongiao)
+insert into dbo.NHANVIEN_CHUCVU(MaCV,MaNV) values (@MaCV,@MANV)
+insert into dbo.NHANVIEN_VITRI(MaVT,MaNV) values (@VTCV,@MANV)
 print(N'Đã thêm nhân viên thành công')
 end
 end

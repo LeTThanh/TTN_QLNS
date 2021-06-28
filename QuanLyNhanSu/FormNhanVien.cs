@@ -16,6 +16,9 @@ namespace QuanLyNhanSu
         public FormNhanVien()
         {
             InitializeComponent();
+            loadCbMaChucVu();
+            loadCbMaPB();
+            loadCbMaVTCV();
         }
 
         string manv;
@@ -38,7 +41,7 @@ namespace QuanLyNhanSu
             using (SqlConnection sqlcon = new SqlConnection(constr))
             {
                 sqlcon.Open();
-                SqlDataAdapter sqlData = new SqlDataAdapter("Select manv as N'Mã nhân viên', hoten as N'Họ và tên', bangcap as N'Bằng cấp', gioitinh as N'Giới tính', ngaysinh N'Ngày sinh', diachi as N'Địa chỉ', mapb as N'Mã phòng ban', cmtnd as N'Số CCCD', sdt as N'Số điện thoại', dantoc as N'Dân tộc', tongiao as N'Tôn giáo' from nhanvien", sqlcon);
+                SqlDataAdapter sqlData = new SqlDataAdapter("Select nhanvien.MaNV as N'Mã nhân viên', hoten as N'Họ và tên', bangcap as N'Bằng cấp', gioitinh as N'Giới tính', ngaysinh N'Ngày sinh', diachi as N'Địa chỉ', mapb as N'Mã phòng ban', cmtnd as N'Số CCCD', sdt as N'Số điện thoại', dantoc as N'Dân tộc', tongiao as N'Tôn giáo',nvcv.MaCV as N'Mã chức vụ',nvvt.MaVT as N'Mã vị trí'  from nhanvien, NHANVIEN_CHUCVU nvcv,NHANVIEN_VITRI nvvt where nvcv.MaNV = nhanvien.MaNV  and nvvt.MaNV = nhanvien.MaNV ", sqlcon);
                 DataTable dataTable = new DataTable();
                 sqlData.Fill(dataTable);
                 DataGridView1.DataSource = dataTable;
@@ -92,23 +95,25 @@ namespace QuanLyNhanSu
                     guna2DateTimePicker_ns.Value = Convert.ToDateTime(row.Cells[4].Value);
                 }
                 guna2TextBox_diachi.Text= row.Cells[5].Value.ToString();
-                guna2TextBox_mapb.Text= row.Cells[6].Value.ToString();
+                cbMaPB.Text= row.Cells[6].Value.ToString();
                 guna2TextBox_cccd.Text= row.Cells[7].Value.ToString();
                 guna2TextBox_sdt.Text= row.Cells[8].Value.ToString();
                 guna2TextBox_dantoc.Text= row.Cells[9].Value.ToString();
                 guna2TextBox_tongiao.Text= row.Cells[10].Value.ToString();
+                cbMaCVu.Text = row.Cells[11].Value.ToString();
+                cbVTCV.Text = row.Cells[12].Value.ToString();
             }    
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            comboBox1_Index();
+           // comboBox1_Index();
             if (check() == true)
             {
                 using (SqlConnection sqlcon = new SqlConnection(constr))
                 {
                     sqlcon.Open();
-                    SqlCommand command = new SqlCommand("execute Capnhatthongtin '" + guna2TextBox_manv.Text + "', N'" + guna2TextBox_hoten.Text + "', N'" + guna2TextBox_bangcap.Text + "', N'" + guna2TextBox_gioitinh.Text + "', '" + guna2DateTimePicker_ns.Value.ToString() + "', N'" + guna2TextBox_diachi.Text + "', '" + guna2TextBox_mapb.Text + "', '" + guna2TextBox_cccd.Text + "', '" + guna2TextBox_sdt.Text + "', N'" + guna2TextBox_dantoc.Text + "', N'" + guna2TextBox_tongiao.Text + "','" + manv + "'", sqlcon);
+                    SqlCommand command = new SqlCommand("execute Capnhatthongtin '" + guna2TextBox_manv.Text + "', N'" + guna2TextBox_hoten.Text + "', N'" + guna2TextBox_bangcap.Text + "', N'" + guna2TextBox_gioitinh.Text + "', '" + guna2DateTimePicker_ns.Value.ToString() + "', N'" + guna2TextBox_diachi.Text + "', '" + cbMaPB.Text + "', '" + guna2TextBox_cccd.Text + "', '" + guna2TextBox_sdt.Text + "', N'" + guna2TextBox_dantoc.Text + "', N'" + guna2TextBox_tongiao.Text + "', N'" + cbVTCV.Text + "', N'" + cbMaCVu.Text + "','" + manv + "'", sqlcon);
                     sqlcon.InfoMessage += new SqlInfoMessageEventHandler(InfoMessageHandler);
                     command.ExecuteNonQuery();
                     sqlcon.Close();
@@ -119,7 +124,7 @@ namespace QuanLyNhanSu
 
         bool check()
         {
-            if (guna2TextBox_bangcap.Text == "" || guna2TextBox_cccd.Text == "" || guna2TextBox_dantoc.Text == "" || guna2TextBox_diachi.Text == "" || guna2TextBox_gioitinh.Text == "" || guna2TextBox_hoten.Text == "" || guna2TextBox_manv.Text == "" || guna2TextBox_mapb.Text == "" || guna2TextBox_sdt.Text == "" || guna2TextBox_tongiao.Text == "")
+            if (guna2TextBox_bangcap.Text == "" || guna2TextBox_cccd.Text == "" || guna2TextBox_dantoc.Text == "" || guna2TextBox_diachi.Text == "" || guna2TextBox_gioitinh.Text == "" || guna2TextBox_hoten.Text == "" || guna2TextBox_manv.Text == "" || cbMaPB.Text == "" || guna2TextBox_sdt.Text == "" || guna2TextBox_tongiao.Text == ""|| cbVTCV.Text == "" || cbMaCVu.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập đầy đủ các trường thông tin", "Cảnh báo");
                 
@@ -164,25 +169,25 @@ namespace QuanLyNhanSu
         }    
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            comboBox1_Index();
+            //comboBox1_Index();
             if(check() == true)
             {    
-            using (SqlConnection sqlcon = new SqlConnection(constr))
-            {
+             using (SqlConnection sqlcon = new SqlConnection(constr))
+             {
                 sqlcon.Open();
-                SqlCommand command = new SqlCommand("execute themNV '" + guna2TextBox_manv.Text + "', N'"+guna2TextBox_hoten.Text+ "', N'"+ guna2TextBox_bangcap.Text+ "', N'"+guna2TextBox_gioitinh.Text+ "', '"+guna2DateTimePicker_ns.Value.ToString()+ "', N'"+guna2TextBox_diachi.Text+ "', '"+guna2TextBox_mapb.Text+ "', '"+guna2TextBox_cccd.Text+ "', '"+guna2TextBox_sdt.Text+ "', N'"+guna2TextBox_dantoc.Text+ "', N'"+guna2TextBox_tongiao.Text+"'", sqlcon);
+                SqlCommand command = new SqlCommand("execute themNV '" + guna2TextBox_manv.Text + "', N'"+guna2TextBox_hoten.Text+ "', N'"+ guna2TextBox_bangcap.Text+ "', N'"+guna2TextBox_gioitinh.Text+ "', '"+guna2DateTimePicker_ns.Value.ToString()+ "', N'"+guna2TextBox_diachi.Text+ "', '"+cbMaPB.Text+ "', '"+guna2TextBox_cccd.Text+ "', '"+guna2TextBox_sdt.Text+ "', N'"+guna2TextBox_dantoc.Text+ "', N'"+guna2TextBox_tongiao.Text+ "', '" + cbVTCV.Text + "', '" + cbMaCVu.Text + "'", sqlcon);
                 sqlcon.InfoMessage += new SqlInfoMessageEventHandler(InfoMessageHandler);
                 command.ExecuteNonQuery();
                 sqlcon.Close();
-            }
+             }
             load();
-        }
-    }
+            }
+        }  
 
 
         private void comboBox1_Index()
         {
-            guna2TextBox_mapb.Items.Clear();
+            cbMaPB.Items.Clear();
             using (SqlConnection sqlcon = new SqlConnection(constr))
             {
                 sqlcon.Open();
@@ -190,9 +195,9 @@ namespace QuanLyNhanSu
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    guna2TextBox_mapb.Items.Add(reader["mapb"].ToString());
-                    guna2TextBox_mapb.DisplayMember = (reader["mapb"].ToString());
-                    guna2TextBox_mapb.ValueMember = (reader["mapb"].ToString());
+                    cbMaPB.Items.Add(reader["mapb"].ToString());
+                    cbMaPB.DisplayMember = (reader["mapb"].ToString());
+                    cbMaPB.ValueMember = (reader["mapb"].ToString());
                 }
             }
         }
@@ -220,6 +225,28 @@ namespace QuanLyNhanSu
                 DataGridView1.DataSource = dataTable;
                 sqlcon.Close();
             }
+        }
+
+        void loadCbMaPB()
+        {
+            string query = "Select * from PHONGBAN";
+            cbMaPB.DataSource = DataProvider.Instance.ExecuteQuery(query);
+            cbMaPB.DisplayMember = "MaPB";
+            cbMaPB.ValueMember = "MaPB";
+        }
+        void loadCbMaVTCV()
+        {
+            string query = "Select * from VITRICONGVIEC";
+            cbVTCV.DataSource = DataProvider.Instance.ExecuteQuery(query);
+            cbVTCV.DisplayMember = "MaVT";
+            cbVTCV.ValueMember = "MaVT";
+        }
+        void loadCbMaChucVu()
+        {
+            string query = "Select * from CHUCVU";
+            cbMaCVu.DataSource = DataProvider.Instance.ExecuteQuery(query);
+            cbMaCVu.DisplayMember = "MaCV";
+            cbMaCVu.ValueMember = "MaCV";
         }
     }
     

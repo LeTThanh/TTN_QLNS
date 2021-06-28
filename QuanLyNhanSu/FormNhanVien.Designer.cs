@@ -29,9 +29,9 @@ namespace QuanLyNhanSu
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -43,6 +43,9 @@ namespace QuanLyNhanSu
             this.guna2RadioButton_ma = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.guna2TextBox_gioitinh = new System.Windows.Forms.ComboBox();
+            this.guna2TextBox_bangcap = new System.Windows.Forms.ComboBox();
+            this.cbMaPB = new System.Windows.Forms.ComboBox();
             this.guna2DateTimePicker_ns = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2TextBox_diachi = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -63,9 +66,10 @@ namespace QuanLyNhanSu
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2TextBox_mapb = new System.Windows.Forms.ComboBox();
-            this.guna2TextBox_bangcap = new System.Windows.Forms.ComboBox();
-            this.guna2TextBox_gioitinh = new System.Windows.Forms.ComboBox();
+            this.cbMaCVu = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbVTCV = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
@@ -236,9 +240,13 @@ namespace QuanLyNhanSu
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbVTCV);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.cbMaCVu);
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.guna2TextBox_gioitinh);
             this.groupBox1.Controls.Add(this.guna2TextBox_bangcap);
-            this.groupBox1.Controls.Add(this.guna2TextBox_mapb);
+            this.groupBox1.Controls.Add(this.cbMaPB);
             this.groupBox1.Controls.Add(this.guna2DateTimePicker_ns);
             this.groupBox1.Controls.Add(this.guna2TextBox_diachi);
             this.groupBox1.Controls.Add(this.label12);
@@ -267,6 +275,38 @@ namespace QuanLyNhanSu
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phòng ban";
             // 
+            // guna2TextBox_gioitinh
+            // 
+            this.guna2TextBox_gioitinh.FormattingEnabled = true;
+            this.guna2TextBox_gioitinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.guna2TextBox_gioitinh.Location = new System.Drawing.Point(134, 117);
+            this.guna2TextBox_gioitinh.Name = "guna2TextBox_gioitinh";
+            this.guna2TextBox_gioitinh.Size = new System.Drawing.Size(150, 24);
+            this.guna2TextBox_gioitinh.TabIndex = 40;
+            // 
+            // guna2TextBox_bangcap
+            // 
+            this.guna2TextBox_bangcap.FormattingEnabled = true;
+            this.guna2TextBox_bangcap.Items.AddRange(new object[] {
+            "THPT",
+            "Đại học",
+            "Thạc sĩ",
+            "Tiến sĩ"});
+            this.guna2TextBox_bangcap.Location = new System.Drawing.Point(134, 78);
+            this.guna2TextBox_bangcap.Name = "guna2TextBox_bangcap";
+            this.guna2TextBox_bangcap.Size = new System.Drawing.Size(150, 24);
+            this.guna2TextBox_bangcap.TabIndex = 39;
+            // 
+            // cbMaPB
+            // 
+            this.cbMaPB.FormattingEnabled = true;
+            this.cbMaPB.Location = new System.Drawing.Point(436, 160);
+            this.cbMaPB.Name = "cbMaPB";
+            this.cbMaPB.Size = new System.Drawing.Size(150, 24);
+            this.cbMaPB.TabIndex = 38;
+            // 
             // guna2DateTimePicker_ns
             // 
             this.guna2DateTimePicker_ns.CheckedState.Parent = this.guna2DateTimePicker_ns;
@@ -274,7 +314,7 @@ namespace QuanLyNhanSu
             this.guna2DateTimePicker_ns.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePicker_ns.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.guna2DateTimePicker_ns.HoverState.Parent = this.guna2DateTimePicker_ns;
-            this.guna2DateTimePicker_ns.Location = new System.Drawing.Point(134, 155);
+            this.guna2DateTimePicker_ns.Location = new System.Drawing.Point(134, 147);
             this.guna2DateTimePicker_ns.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker_ns.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker_ns.Name = "guna2DateTimePicker_ns";
@@ -296,7 +336,7 @@ namespace QuanLyNhanSu
             this.guna2TextBox_diachi.FocusedState.Parent = this.guna2TextBox_diachi;
             this.guna2TextBox_diachi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox_diachi.HoverState.Parent = this.guna2TextBox_diachi;
-            this.guna2TextBox_diachi.Location = new System.Drawing.Point(134, 196);
+            this.guna2TextBox_diachi.Location = new System.Drawing.Point(134, 178);
             this.guna2TextBox_diachi.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
             this.guna2TextBox_diachi.Name = "guna2TextBox_diachi";
             this.guna2TextBox_diachi.PasswordChar = '\0';
@@ -311,7 +351,7 @@ namespace QuanLyNhanSu
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(250)))));
-            this.label12.Location = new System.Drawing.Point(14, 205);
+            this.label12.Location = new System.Drawing.Point(20, 187);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 16);
             this.label12.TabIndex = 35;
@@ -415,7 +455,7 @@ namespace QuanLyNhanSu
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(250)))));
-            this.label7.Location = new System.Drawing.Point(317, 164);
+            this.label7.Location = new System.Drawing.Point(322, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 16);
             this.label7.TabIndex = 29;
@@ -478,7 +518,7 @@ namespace QuanLyNhanSu
             this.guna2TextBox_hoten.FocusedState.Parent = this.guna2TextBox_hoten;
             this.guna2TextBox_hoten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox_hoten.HoverState.Parent = this.guna2TextBox_hoten;
-            this.guna2TextBox_hoten.Location = new System.Drawing.Point(134, 46);
+            this.guna2TextBox_hoten.Location = new System.Drawing.Point(134, 45);
             this.guna2TextBox_hoten.Margin = new System.Windows.Forms.Padding(5);
             this.guna2TextBox_hoten.Name = "guna2TextBox_hoten";
             this.guna2TextBox_hoten.PasswordChar = '\0';
@@ -516,7 +556,7 @@ namespace QuanLyNhanSu
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(250)))));
-            this.label5.Location = new System.Drawing.Point(14, 164);
+            this.label5.Location = new System.Drawing.Point(20, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 16);
             this.label5.TabIndex = 4;
@@ -527,7 +567,7 @@ namespace QuanLyNhanSu
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(250)))));
-            this.label4.Location = new System.Drawing.Point(19, 126);
+            this.label4.Location = new System.Drawing.Point(20, 117);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 16);
             this.label4.TabIndex = 3;
@@ -538,7 +578,7 @@ namespace QuanLyNhanSu
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(250)))));
-            this.label3.Location = new System.Drawing.Point(20, 90);
+            this.label3.Location = new System.Drawing.Point(20, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 2;
@@ -549,7 +589,7 @@ namespace QuanLyNhanSu
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(250)))));
-            this.label2.Location = new System.Drawing.Point(20, 55);
+            this.label2.Location = new System.Drawing.Point(20, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 1;
@@ -568,30 +608,31 @@ namespace QuanLyNhanSu
             // 
             // DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridView1.ColumnHeadersHeight = 20;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.DataGridView1.EnableHeadersVisualStyles = false;
             this.DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView1.Location = new System.Drawing.Point(9, 261);
@@ -624,34 +665,43 @@ namespace QuanLyNhanSu
             this.DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
-            // guna2TextBox_mapb
+            // cbMaCVu
             // 
-            this.guna2TextBox_mapb.FormattingEnabled = true;
-            this.guna2TextBox_mapb.Location = new System.Drawing.Point(436, 163);
-            this.guna2TextBox_mapb.Name = "guna2TextBox_mapb";
-            this.guna2TextBox_mapb.Size = new System.Drawing.Size(150, 24);
-            this.guna2TextBox_mapb.TabIndex = 38;
+            this.cbMaCVu.FormattingEnabled = true;
+            this.cbMaCVu.Location = new System.Drawing.Point(436, 196);
+            this.cbMaCVu.Name = "cbMaCVu";
+            this.cbMaCVu.Size = new System.Drawing.Size(150, 24);
+            this.cbMaCVu.TabIndex = 42;
             // 
-            // guna2TextBox_bangcap
+            // label13
             // 
-            this.guna2TextBox_bangcap.FormattingEnabled = true;
-            this.guna2TextBox_bangcap.Items.AddRange(new object[] {
-            "THPT",
-            "Đại học",
-            "Thạc sĩ",
-            "Tiến sĩ"});
-            this.guna2TextBox_bangcap.Location = new System.Drawing.Point(134, 82);
-            this.guna2TextBox_bangcap.Name = "guna2TextBox_bangcap";
-            this.guna2TextBox_bangcap.Size = new System.Drawing.Size(150, 24);
-            this.guna2TextBox_bangcap.TabIndex = 39;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(250)))));
+            this.label13.Location = new System.Drawing.Point(322, 199);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 16);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "Mã chức vụ:";
             // 
-            // guna2TextBox_gioitinh
+            // cbVTCV
             // 
-            this.guna2TextBox_gioitinh.FormattingEnabled = true;
-            this.guna2TextBox_gioitinh.Location = new System.Drawing.Point(134, 120);
-            this.guna2TextBox_gioitinh.Name = "guna2TextBox_gioitinh";
-            this.guna2TextBox_gioitinh.Size = new System.Drawing.Size(150, 24);
-            this.guna2TextBox_gioitinh.TabIndex = 40;
+            this.cbVTCV.FormattingEnabled = true;
+            this.cbVTCV.Location = new System.Drawing.Point(134, 213);
+            this.cbVTCV.Name = "cbVTCV";
+            this.cbVTCV.Size = new System.Drawing.Size(155, 24);
+            this.cbVTCV.TabIndex = 44;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(250)))));
+            this.label14.Location = new System.Drawing.Point(20, 216);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 16);
+            this.label14.TabIndex = 43;
+            this.label14.Text = "Mã VTCV:";
             // 
             // FormNhanVien
             // 
@@ -711,8 +761,12 @@ namespace QuanLyNhanSu
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker_ns;
-        private System.Windows.Forms.ComboBox guna2TextBox_mapb;
+        private System.Windows.Forms.ComboBox cbMaPB;
         private System.Windows.Forms.ComboBox guna2TextBox_bangcap;
         private System.Windows.Forms.ComboBox guna2TextBox_gioitinh;
+        private System.Windows.Forms.ComboBox cbVTCV;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbMaCVu;
+        private System.Windows.Forms.Label label13;
     }
 }

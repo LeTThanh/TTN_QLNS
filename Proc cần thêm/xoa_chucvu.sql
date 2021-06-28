@@ -1,7 +1,7 @@
 use QuanLyNhanSu1
 go
 
-create proc XoaCV
+create or alter proc XoaCV
 @maCV nvarchar(20)
 as
 begin
