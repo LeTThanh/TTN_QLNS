@@ -49,9 +49,9 @@ namespace QuanLyNhanSu
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtMaVT.Text == "" || txtTenVT.Text == "")
+            if (txtMaVitri.Text == "" || txtTenVT.Text == "")
             {
-                MessageBox.Show("Cần điền đầy đủ thông tin", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("Cần điền đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -65,7 +65,7 @@ namespace QuanLyNhanSu
                             if (con.State == ConnectionState.Closed)
                                 con.Open();
                             SqlCommand cmd = new SqlCommand("INSERT INTO VITRICONGVIEC(MaVT, TenVT) VALUES (@ma, @ten)", con);
-                            cmd.Parameters.AddWithValue("@ma", txtMaVT.Text);
+                            cmd.Parameters.AddWithValue("@ma", txtMaVitri.Text);
                             cmd.Parameters.AddWithValue("@ten", txtTenVT.Text);
                             SqlDataReader reader = cmd.ExecuteReader();
                             DataTable table = new DataTable();
@@ -96,7 +96,7 @@ namespace QuanLyNhanSu
                         if (con.State == ConnectionState.Closed)
                             con.Open();
                         SqlCommand cmd = new SqlCommand("UPDATE VITRICONGVIEC SET TenVT = @ten WHERE MaVT = @ma", con);
-                        cmd.Parameters.AddWithValue("@ma", txtMaVT.Text);
+                        cmd.Parameters.AddWithValue("@ma", txtMaVitri.Text);
                         cmd.Parameters.AddWithValue("@ten", txtTenVT.Text);
                         SqlDataReader reader = cmd.ExecuteReader();
                         DataTable table = new DataTable();
@@ -126,7 +126,7 @@ namespace QuanLyNhanSu
                         if (con.State == ConnectionState.Closed)
                             con.Open();
                         SqlCommand cmd = new SqlCommand("DELETE VITRICONGVIEC WHERE MaVT = @ma", con);
-                        cmd.Parameters.AddWithValue("@ma", txtMaVT.Text);
+                        cmd.Parameters.AddWithValue("@ma", txtMaVitri.Text);
                         SqlDataReader reader = cmd.ExecuteReader();
                         DataTable table = new DataTable();
                         table.Load(reader);
@@ -196,7 +196,7 @@ namespace QuanLyNhanSu
         private void dtGridview1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = dtGridview1.CurrentRow.Index;
-            txtMaVT.Text = dtGridview1.Rows[i].Cells[0].Value.ToString();
+            txtMaVitri.Text = dtGridview1.Rows[i].Cells[0].Value.ToString();
             txtTenVT.Text = dtGridview1.Rows[i].Cells[1].Value.ToString();
         }
     }
