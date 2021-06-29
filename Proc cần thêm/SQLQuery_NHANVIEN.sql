@@ -9,6 +9,7 @@ else
 begin
 delete from NHANVIEN_CHUCVU where MaNV=@ma
 delete from NHANVIEN_VITRI where MaNV=@ma
+delete from LUONG where MaNV=@ma
 delete NHANVIEN where MANV=@ma
 print(N'Xóa nhân viên thành công')
 end
@@ -62,11 +63,11 @@ CREATE OR ALTER proc [dbo].[timkiemnv] @ma nvarchar(10), @ten nvarchar(50)
 as begin
 if(@ma <> '' and @ten = '')
 begin
-Select manv as N'Mã nhân viên', hoten as N'Họ và tên', bangcap as N'Bằng cấp', gioitinh as N'Giới tính', ngaysinh N'Ngày sinh', diachi as N'Địa chỉ', mapb as N'Mã phòng ban', cmtnd as N'Số CCCD', sdt as N'Số điện thoại', dantoc as N'Dân tộc', tongiao as N'Tôn giáo' from NHANVIEN where MaNV like '%'+ @ma +'%'
+Select nhanvien.MaNV as N'Mã nhân viên', hoten as N'Họ và tên', bangcap as N'Bằng cấp', gioitinh as N'Giới tính', ngaysinh N'Ngày sinh', diachi as N'Địa chỉ', mapb as N'Mã phòng ban', cmtnd as N'Số CCCD', sdt as N'Số điện thoại', dantoc as N'Dân tộc', tongiao as N'Tôn giáo' ,vtcv.MaVT as N'Mã vị trí',cv.MaCV as N'Mã chức vụ'from NHANVIEN,NHANVIEN_VITRI vtcv,NHANVIEN_CHUCVU cv where nhanvien.MaNV = vtcv.MaNV and nhanvien.MaNV = cv.MaNV and nhanvien.MaNV like '%'+ @ma +'%'
 end
 if(@ma = '' and @ten <> '')
 begin
-Select manv as N'Mã nhân viên', hoten as N'Họ và tên', bangcap as N'Bằng cấp', gioitinh as N'Giới tính', ngaysinh N'Ngày sinh', diachi as N'Địa chỉ', mapb as N'Mã phòng ban', cmtnd as N'Số CCCD', sdt as N'Số điện thoại', dantoc as N'Dân tộc', tongiao as N'Tôn giáo' from NHANVIEN where HoTen like '%' + @ten +'%'
+Select nhanvien.MaNV as N'Mã nhân viên', hoten as N'Họ và tên', bangcap as N'Bằng cấp', gioitinh as N'Giới tính', ngaysinh N'Ngày sinh', diachi as N'Địa chỉ', mapb as N'Mã phòng ban', cmtnd as N'Số CCCD', sdt as N'Số điện thoại', dantoc as N'Dân tộc', tongiao as N'Tôn giáo',vtcv.MaVT as N'Mã vị trí',cv.MaCV as N'Mã chức vụ'from NHANVIEN,NHANVIEN_VITRI vtcv,NHANVIEN_CHUCVU cv where nhanvien.MaNV = vtcv.MaNV and nhanvien.MaNV = cv.MaNV and HoTen like '%' + @ten +'%'
 end
 end
 GO
@@ -82,4 +83,5 @@ delete NHANVIEN_CHUCVU where MaNV =@ma
 delete DANGNHAP where MaNV =@ma
 delete NHANVIEN_VITRI where MaNV =@ma
 delete HDLD where MaNV =@ma
+delete LUONG where MaNV=@ma
 end

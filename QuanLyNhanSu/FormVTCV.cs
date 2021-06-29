@@ -125,7 +125,7 @@ namespace QuanLyNhanSu
                     {
                         if (con.State == ConnectionState.Closed)
                             con.Open();
-                        SqlCommand cmd = new SqlCommand("DELETE VITRICONGVIEC WHERE MaVT = @ma", con);
+                        SqlCommand cmd = new SqlCommand("update NHANVIEN_VITRI set MaVT=null WHERE MaVT = @ma DELETE VITRICONGVIEC WHERE MaVT = @ma", con);
                         cmd.Parameters.AddWithValue("@ma", txtMaVitri.Text);
                         SqlDataReader reader = cmd.ExecuteReader();
                         DataTable table = new DataTable();
